@@ -1,5 +1,6 @@
 package com.guli.edu.controller.admin;
 
+import com.guli.common.vo.ReturnResult;
 import com.guli.edu.entity.Teacher;
 import com.guli.edu.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,12 @@ public class TeacherAdminController {
     @DeleteMapping(value = "/{id}")
     public boolean deleteById(@PathVariable String id){
         return false;
+    }
+
+    @GetMapping("/{page}/{limit}")
+    public ReturnResult pageList(@PathVariable int page,@PathVariable int limit){
+
+        return null;
     }
 
 }
